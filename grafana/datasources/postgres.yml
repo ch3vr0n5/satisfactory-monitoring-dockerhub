@@ -3,7 +3,7 @@ datasources:
   - name: Postgres
     type: postgres
     uid: GhzMNppVk
-    url: postgres:5432
+    url: localhost:5432
     database: postgres
     user: postgres
     secureJsonData:

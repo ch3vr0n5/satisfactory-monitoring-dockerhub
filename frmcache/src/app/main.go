@@ -31,7 +31,7 @@ func main() {
 	frmPort, _ := os.LookupEnv("FRM_PORT")
 	frmHostnames, _ := os.LookupEnv("FRM_HOSTS")
 
-	pgHost := lookupEnvWithDefault("PG_HOST", "postgres")
+	pgHost := lookupEnvWithDefault("PG_HOST", "localhost")
 	pgPort, err := strconv.Atoi(lookupEnvWithDefault("PG_PORT", "5432"))
 	if err != nil {
 		pgPort = 5432
