@@ -44,9 +44,6 @@ RUN mkdir -p /var/lib/postgresql/data /docker-entrypoint-initdb.d && \
 # Copy initialization script for PostgreSQL
 COPY init-postgres.sql /docker-entrypoint-initdb.d/init-postgres.sql
 
-# Initialize Postgres DB
-RUN su postgres -c "/usr/lib/postgresql/13/bin/initdb -D /var/lib/postgresql/data"
-
 # Copy built binaries
 COPY --from=frmcompanion-builder /usr/local/bin/companion /usr/local/bin/companion
 COPY --from=frmcache-builder /usr/local/bin/frmcache /usr/local/bin/frmcache
